@@ -1,0 +1,16 @@
+<h1>Searching: <small> {{ search }}</small></h1>
+<hr>
+
+<div class="row" *ngIf="albumsFounded.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No results found with: {{ search }}
+        </div>
+    </div>
+</div>
+
+<div class="card-columns">
+
+    <app-album-card [album]="foo" [index]="foo.idx" *ngFor="let foo of albumsFounded; let i = index"></app-album-card>
+
+</div>

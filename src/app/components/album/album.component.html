@@ -1,0 +1,29 @@
+<h1 class="animated fadeIn">{{ album.nombre | uppercase }} <small> Released on ({{ album.fecha | date: 'y' }})</small></h1>
+<hr>
+
+
+<div class="row spaceBottom animated fadeIn fast">
+    <div class="col-md-4">
+
+        <img [src]="album.img" [alt]="album.nombre" class="img-fluid">
+        <br><br>
+        <a [routerLink]="['/albums']" class="btn btn-outline-danger btn-block spaceBottomButton">Go back</a>
+
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{ album.banda }}</h3>
+        <hr>
+        <p>
+            {{ album.bio }}
+        </p>
+
+        <div>
+            <img [src]="album.bandaImg" [alt]="album.bandaImg" class="img-fluid imgBand">
+        </div>
+
+    </div>
+
+
+
+</div>
